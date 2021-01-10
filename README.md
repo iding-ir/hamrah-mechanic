@@ -1,3 +1,3 @@
 # Demo
 
-[Live demo](http://iding.ir/hamrah-mechanic).
+[Live demo](http://hamrah-mechanic.iding.ir).
