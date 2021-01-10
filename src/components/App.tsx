@@ -8,12 +8,12 @@ function App() {
 
   const onChange = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
-    
+
     const counts = value.split("/");
 
-    let tempRow: JSX.Element[][]= [];
+    let tempRows: JSX.Element[][]= [];
 
-    const divRows = counts.map((part) => {
+    const tempRow = counts.map((part) => {
       let row: JSX.Element[] = [];
 
       for (let i = 0; i < parseInt(part); i++) {
@@ -23,9 +23,9 @@ function App() {
       return <div className="Row">{row}</div>;
     });
 
-    tempRow = [...tempRow, divRows];
+    tempRows = [...tempRows, tempRow];
 
-    setRows(tempRow)
+    setRows(tempRows)
   };
 
   return (
