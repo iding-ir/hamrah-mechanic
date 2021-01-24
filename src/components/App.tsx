@@ -11,7 +11,7 @@ function App() {
 
     const counts = value.split("/");
 
-    let tempRows: JSX.Element[][]= [];
+    let tempRows: JSX.Element[][] = [];
 
     const tempRow = counts.map((part) => {
       let row: JSX.Element[] = [];
@@ -25,12 +25,12 @@ function App() {
 
     tempRows = [...tempRows, tempRow];
 
-    setRows(tempRows)
+    setRows(tempRows);
   };
 
   return (
     <div className="App">
-      <input ref={inputEl} onChange={onChange} />
+      <input ref={inputEl} onChange={onChange} placeholder="Example: 2/1/3" />
 
       <div className="Wrapper">{rows}</div>
     </div>
